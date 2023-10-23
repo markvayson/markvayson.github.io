@@ -47,7 +47,7 @@ const containerVariants: Variants = {
   },
 };
 
-const Home = ({ name }: { name: string }) => {
+const Home = ({ name, background }: { name: string; background: string }) => {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
@@ -63,6 +63,15 @@ const Home = ({ name }: { name: string }) => {
       id="home"
       ref={ref}
     >
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 0.2 }}
+        transition={{ duration: 0.2 }}
+        viewport={{ once: true }}
+        className="absolute bottom-0 h-[75%] w-full  max-w-3xl "
+      >
+        <Image alt="profile" src={background} sizes="100vw" fill />
+      </motion.div>
       <SectionTitle title="Welcome to my Portfolio" />
       <motion.div
         variants={containerVariants}

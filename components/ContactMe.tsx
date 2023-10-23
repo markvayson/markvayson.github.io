@@ -67,28 +67,32 @@ const ContactMe = ({
           className="relative   flex h-full w-full flex-col items-center gap-5 px-5 py-5   md:gap-10  "
         >
           <fieldset className="relative h-[3.1rem] w-full  ">
-            <input
-              type="email"
-              name="email"
-              required
-              maxLength={500}
-              className="inputClass peer rounded-lg"
-            />
-            <label className="inputLabelClass">Your Email</label>
+            <label>
+              <input
+                type="email"
+                name="email"
+                required
+                maxLength={500}
+                className="inputClass peer rounded-lg"
+              />
+              <span className="inputLabelClass">Your Email</span>
+            </label>
           </fieldset>
           <fieldset className="relative h-24 w-full flex-auto ">
-            <textarea
-              minLength={10}
-              maxLength={2000}
-              className="inputClass peer h-full w-full rounded-lg"
-              name="message"
-              required
-            />
-            <label className="inputLabelClass">Your Message</label>
+            <label>
+              <textarea
+                minLength={10}
+                maxLength={2000}
+                className="inputClass peer h-full w-full rounded-lg"
+                name="message"
+                required
+              />
+              <span className="inputLabelClass">Your Message</span>
+            </label>
           </fieldset>
           <SubmitBtn />
         </form>
-        <div className="flex w-full flex-auto flex-col items-center pt-2 md:-mt-24">
+        <div className="flex w-full flex-auto flex-col items-center pt-2 ">
           <h1 className="text-center text-3xl font-black  md:text-7xl md:tracking-widest">
             Stay Connected.
           </h1>

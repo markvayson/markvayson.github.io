@@ -10,8 +10,6 @@ const poppins = Poppins({
   display: "swap",
 });
 export const metadata: Metadata = {
-  viewport:
-    "width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no",
   title: "MarkZv",
   description: "The Portfolio of Mark Christian Vayson",
 };
