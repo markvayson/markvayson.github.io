@@ -69,15 +69,15 @@ const Projects = ({ data }: { data: PinnedItem[] }) => {
           className="group flex min-h-screen w-full shrink-0 snap-center items-center justify-center"
           key={index}
         >
-          <div className="grid h-screen w-full max-w-10xl gap-2 max-sm:mt-24 max-sm:grid-rows-2 md:mt-0   md:max-h-96 md:grid-cols-2 md:gap-10 ">
+          <div className=" grid h-screen w-full max-w-10xl  gap-2 max-sm:mt-24 max-sm:grid-rows-2 md:mt-0   md:max-h-96 md:grid-cols-2 md:gap-10 ">
             <motion.div
               variants={imgVariants}
-              className="relative group-even:md:order-2"
+              className="relative m-auto h-[24rem] w-[26rem]  md:w-full  group-even:md:order-2"
             >
               <Image
                 src={project.openGraphImageUrl}
                 alt={project.name}
-                className="rounded-[2rem] p-5 md:p-0"
+                className="rounded-[2rem] object-cover p-5 md:p-0"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

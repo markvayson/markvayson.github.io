@@ -67,10 +67,15 @@ const Home = ({ name, background }: { name: string; background: string }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.2 }}
         transition={{ duration: 0.2 }}
-        viewport={{ once: true }}
-        className="absolute bottom-0 h-[75%] w-full  max-w-3xl "
+        className="absolute bottom-24 h-[28rem] w-[28rem] max-w-3xl md:bottom-0 md:h-[45rem] md:w-[45rem]"
       >
-        <Image alt="profile" src={background} sizes="100vw" fill />
+        <Image
+          alt="profile"
+          src={background}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-contain"
+          fill
+        />
       </motion.div>
       <SectionTitle title="Welcome to my Portfolio" />
       <motion.div
