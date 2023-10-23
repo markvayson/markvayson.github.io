@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .inputClass {
+    @apply absolute  z-10 w-full  border bg-transparent px-5 py-3 outline-none autofill:bg-transparent   invalid:text-opacity-0;
+  }
+  .inputLabelClass {
+    @apply absolute left-5 z-10 h-fit w-fit  -translate-y-3 select-none px-1 transition-all duration-300  peer-valid:left-1/2 peer-valid:-translate-x-1/2    peer-focus:left-1/2 peer-focus:-translate-x-1/2    max-sm:dark:bg-slate-950 md:backdrop-blur-sm;
+  }
+}
