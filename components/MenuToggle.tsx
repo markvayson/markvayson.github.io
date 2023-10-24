@@ -18,7 +18,7 @@ const Path: React.FC<PathProps> = (props) => {
 
 const sidebar: Variants = {
   open: {
-    width: "60%",
+    width: "100%",
     height: "100%",
     borderRadius: 0,
     top: 0,
@@ -46,12 +46,14 @@ export const MenuToggle = () => {
 
   return (
     <motion.nav
-      className={isOpen ? "fixed inset-0 z-50 backdrop-blur" : " relative z-50"}
+      className={
+        isOpen ? "fixed inset-0 z-30  backdrop-blur" : " relative z-50"
+      }
       initial="closed"
       animate={isOpen ? "open" : "closed"}
     >
       <motion.div
-        className="fixed  z-50 bg-slate-100 dark:bg-slate-800/90 md:hidden "
+        className="fixed  z-50 bg-white/90 shadow-md dark:bg-slate-800/90 md:hidden "
         variants={sidebar}
       />
       <button
@@ -81,8 +83,8 @@ export const MenuToggle = () => {
           />
         </svg>
       </button>
-      <Links isOpen={isOpen} toggle={() => toggleOpen()} />
       <ThemeToggle isOpen={isOpen} />
+      <Links isOpen={isOpen} toggle={() => toggleOpen()} />
     </motion.nav>
   );
 };

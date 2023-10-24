@@ -50,7 +50,7 @@ const Links = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => {
       variants={parent}
       initial={false}
       animate={isOpen ? "open" : "closed"}
-      className="fixed bottom-0  right-1/3 top-0 z-50 flex translate-x-1/2 transform  flex-col justify-center gap-2  backdrop-blur [--display-from:none] [--display-to:flex] [--opacity-from:0%] [--y-from:50]  md:bottom-auto md:right-1/2 md:top-2 md:translate-y-0   md:flex-row md:items-center md:justify-center md:gap-5 md:rounded-full md:bg-white/90 md:p-4 md:shadow-md md:[--display-from:flex] md:[--opacity-from:100%]  md:[--y-from:0] dark:md:bg-slate-800/50"
+      className="fixed bottom-0  left-1/2 top-0 z-50 flex w-fit -translate-x-1/2 transform  flex-col justify-center gap-2  [--display-from:none] [--display-to:flex] [--opacity-from:0%] [--y-from:50]  md:bottom-auto md:right-1/2 md:top-2 md:translate-y-0   md:flex-row md:items-center md:justify-center md:gap-5 md:rounded-full md:bg-white/90 md:p-4 md:shadow-md md:[--display-from:flex] md:[--opacity-from:100%]  md:[--y-from:0] dark:md:bg-slate-800/50"
     >
       {navigations.map((nav, index) => (
         <motion.li

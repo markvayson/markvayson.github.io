@@ -68,7 +68,7 @@ const Home = ({ name, background }: { name: string; background: string }) => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.2 }}
         transition={{ duration: 0.5 }}
-        className=" absolute bottom-24 h-[28rem] w-[28rem] max-w-3xl md:bottom-0 md:h-[45rem] md:w-[45rem]"
+        className=" absolute bottom-0 h-[28rem] w-[28rem] max-w-3xl md:bottom-0 md:w-[45rem] lg:h-[32rem]"
       >
         <Image
           alt="profile"
@@ -85,10 +85,13 @@ const Home = ({ name, background }: { name: string; background: string }) => {
         whileInView="visible"
         className="relative m-auto flex h-96 w-full max-w-5xl flex-col items-center space-y-2 md:space-y-5  "
       >
-        <motion.h1 variants={textVariants} className="font-bold   md:text-3xl">
+        <motion.h1
+          variants={textVariants}
+          className="font-bold   md:text-xl lg:text-2xl"
+        >
           My name is
         </motion.h1>
-        <p className="space-x-2 text-3xl font-black  md:space-x-5 md:text-7xl">
+        <p className="space-x-2 text-center text-3xl font-black  md:space-x-5 md:text-5xl lg:text-7xl">
           {name.split(" ").map((word, index) => (
             <motion.span
               className="inline-block"

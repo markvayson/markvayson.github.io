@@ -58,7 +58,7 @@ const SlideText = () => {
 
   return (
     <motion.h2
-      className=" flex items-center   md:text-5xl"
+      className=" flex items-center  "
       variants={containerVariants}
       initial="hidden"
       animate={isExiting ? "hidden" : "visible"}
@@ -68,7 +68,7 @@ const SlideText = () => {
         <motion.span
           key={index}
           variants={childVariants}
-          className="inline-block   font-bold md:text-3xl"
+          className="inline-block   font-bold md:text-xl lg:text-2xl"
         >
           {letter === " " ? "\u00A0" : letter}
         </motion.span>
@@ -76,7 +76,7 @@ const SlideText = () => {
       {words[index].split("").map((letter, index) => (
         <motion.span
           variants={wordVariants}
-          className="inline-block text-2xl font-black md:text-5xl"
+          className="inline-block text-2xl font-black md:text-3xl lg:text-5xl"
           key={index}
         >
           {letter === " " ? "\u00A0" : letter}
