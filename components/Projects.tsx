@@ -7,6 +7,7 @@ import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import useActiveSectionContext from "@/lib/activeSection";
 import Link from "next/link";
+import { PinnedItem } from "@/typings";
 
 const articleVariants: Variants = {
   hidden: {
@@ -96,7 +97,7 @@ const Projects = ({ data }: { data: PinnedItem[] }) => {
               <div className="flex  items-center gap-5">
                 <Link
                   target="_blank"
-                  className="rounded-full bg-red-500 px-3 py-2 text-white transition duration-300 hover:scale-125 md:text-lg group-even:md:order-2"
+                  className="rounded-full bg-red-600 px-3 py-2 text-white transition duration-300 hover:scale-125 md:text-lg group-even:md:order-2"
                   href={project.homepageUrl}
                 >
                   See Demo

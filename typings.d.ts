@@ -1,3 +1,5 @@
+import { FC } from "react";
+
 type ReadMe = {
   object: ReadMeText;
 };
@@ -71,11 +73,8 @@ type SocialType = {
 type QueryType = {
   name: string;
   avatarUrl: string;
-  githubUrl: string;
-  whatsAppUrl: string;
   profileREADME: READMEType;
   pinnedItems: PinnedItems;
-  socialAccounts: SocialAccounts;
 };
 
 type READMEType = {
@@ -89,6 +88,7 @@ type READMETEXT = {
 type NavigationType = {
   name: string;
   link: string;
+  icon: FC;
 };
 
 type SubNavType = {

@@ -67,8 +67,8 @@ const Home = ({ name, background }: { name: string; background: string }) => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.2 }}
-        transition={{ duration: 0.2 }}
-        className="absolute bottom-24 h-[28rem] w-[28rem] max-w-3xl md:bottom-0 md:h-[45rem] md:w-[45rem]"
+        transition={{ duration: 0.5 }}
+        className=" absolute bottom-24 h-[28rem] w-[28rem] max-w-3xl md:bottom-0 md:h-[45rem] md:w-[45rem]"
       >
         <Image
           alt="profile"

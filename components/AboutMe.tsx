@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 import SectionTitle from "./SectionTitle";
 import cheerioText from "@/lib/cheerioText";
 import Articles from "./Articles";
+import { READMEType } from "@/typings";
 
 const AboutMe = ({ data }: { data: READMEType }) => {
   const { ref, inView } = useInView({

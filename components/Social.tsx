@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 const Social = ({ url, provider }: { url: string; provider: string }) => {
   return (
     <div className="h-fit w-fit  transition md:hover:scale-125">

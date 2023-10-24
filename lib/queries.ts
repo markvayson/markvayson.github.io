@@ -20,14 +20,6 @@ export const myQuery = gql`
     viewer {
       name
       avatarUrl
-      githubUrl: url
-      whatsAppUrl: company
-      socialAccounts(first: 6) {
-        nodes {
-          provider
-          url
-        }
-      }
       profileREADME: repository(name: "markvayson") {
         object(expression: "HEAD:README.md") {
           ... on Blob {

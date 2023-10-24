@@ -1,3 +1,10 @@
+import {
+  BriefcaseIcon,
+  ChatBubbleLeftRightIcon,
+  HomeIcon,
+} from "@heroicons/react/20/solid";
+import { NavigationType } from "./typings";
+
 export const experiences = [
   {
     year: "Current",
@@ -28,6 +35,7 @@ export const navigations = [
   {
     name: "home",
     link: "#home",
+    icon: HomeIcon,
   },
   // {
   //   name: "about",
@@ -40,9 +48,11 @@ export const navigations = [
   {
     name: "projects",
     link: "#projects",
+    icon: BriefcaseIcon,
   },
   {
     name: "contact",
     link: "#contact",
+    icon: ChatBubbleLeftRightIcon,
   },
 ] satisfies NavigationType[];

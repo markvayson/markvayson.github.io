@@ -55,17 +55,18 @@ const Links = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => {
       {navigations.map((nav, index) => (
         <motion.li
           variants={child}
-          className="group cursor-pointer space-y-2  text-center text-2xl md:text-xl"
+          className="group cursor-pointer space-y-2  text-center  text-2xl md:text-xl"
           key={index}
         >
           <Link
             className={`${
               activeSection === nav.name &&
-              "bg-red-500 text-white backdrop-blur dark:bg-red-600"
-            } transition-color rounded-full px-3 py-1 duration-300 dark:hover:bg-red-700 `}
+              "bg-red-600 text-white opacity-100  backdrop-blur"
+            } transition-color group flex items-center gap-2 rounded-full px-3 py-1 duration-300 hover:bg-red-600 hover:text-white  `}
             href={nav.link}
             onClick={() => handleClick(nav.name)}
           >
+            <nav.icon className="h-6 w-6 group-hover:scale-105" />
             {nav.name.charAt(0).toUpperCase() + nav.name.slice(1)}
           </Link>
         </motion.li>

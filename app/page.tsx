@@ -3,11 +3,10 @@ import { myQuery } from "@/lib/queries";
 import Projects from "@/components/Projects";
 import Home from "@/components/Home";
 import AboutMe from "@/components/AboutMe";
-import ContactMe from "@/components/ContactMe";
 import getSocials from "@/lib/getSocials";
 import Contact from "@/components/Contact";
 import Form from "@/components/Form";
-import SectionTitle from "@/components/SectionTitle";
+import { QueryType } from "@/typings";
 
 const Main = async () => {
   const data: QueryType = await fetchGit(myQuery);

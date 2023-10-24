@@ -27,7 +27,7 @@ export default function RootLayout({
       className="overflow-hidden  !scroll-smooth"
       suppressHydrationWarning
     >
-      <body className={`${poppins.className} bg-slate-50 dark:bg-slate-950`}>
+      <body className={`${poppins.className} bg-slate-100 dark:bg-slate-950`}>
         <Provider>
           <MenuToggle />
           {children}
