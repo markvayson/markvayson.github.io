@@ -1,3 +1,4 @@
+import { SocialType } from "@/typings";
 import fetchGit from "./fetch";
 import { mySocials } from "./queries";
 
