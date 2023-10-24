@@ -1,5 +1,20 @@
 import { gql } from "graphql-request";
 
+export const mySocials = gql`
+  {
+    viewer {
+      githubUrl: url
+      whatsAppUrl: company
+      socialAccounts(first: 6) {
+        nodes {
+          provider
+          url
+        }
+      }
+    }
+  }
+`;
+
 export const myQuery = gql`
   {
     viewer {

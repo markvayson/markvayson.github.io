@@ -62,6 +62,12 @@ type SocialAccount = {
   url: string;
 };
 
+type SocialType = {
+  githubUrl: string;
+  whatsAppUrl: string;
+  socialAccounts: SocialAccounts;
+};
+
 type QueryType = {
   name: string;
   avatarUrl: string;

@@ -1,3 +1,4 @@
+"use client";
 import { experimental_useFormStatus as useFormStatus } from "react-dom";
 const SubmitBtn = () => {
   const { pending } = useFormStatus();

@@ -62,7 +62,7 @@ const ContactMe = ({
     >
       <SectionTitle title="Contact Me" />
       <div className="relative m-auto flex w-full max-w-10xl flex-auto flex-col divide-slate-700 max-sm:gap-2 max-sm:divide-y max-sm:px-5  md:grid md:max-h-96 md:grid-cols-2  md:flex-row">
-        <form
+        {/* <form
           action={sendEmail}
           className="relative   flex h-full w-full flex-col items-center gap-5 px-5 py-5   md:gap-10  "
         >
@@ -91,7 +91,7 @@ const ContactMe = ({
             </label>
           </fieldset>
           <SubmitBtn />
-        </form>
+        </form> */}
         <div className="flex w-full flex-auto flex-col items-center pt-2 ">
           <h1 className="text-center text-3xl font-black  md:text-7xl md:tracking-widest">
             Stay Connected.
