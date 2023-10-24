@@ -14,15 +14,11 @@ const Main = async () => {
   const socials = await getSocials();
   return (
     <main className="relative h-screen w-full select-none snap-y snap-mandatory overflow-x-hidden overflow-y-scroll !scroll-smooth   ">
-      {/* <Home background={data.avatarUrl} name={data.name} /> */}
+      <Home background={data.avatarUrl} name={data.name} />
       {/* <AboutMe data={data.profileREADME} /> */}
       {/* <Experiences /> */}
-      {/* <Projects data={data.pinnedItems.nodes} />
-      <ContactMe
-        whatsapp={data.whatsAppUrl}
-        github={data.githubUrl}
-        socials={data.socialAccounts}
-      /> */}
+      <Projects data={data.pinnedItems.nodes} />
+
       <Contact socials={socials}>
         <Form />
       </Contact>

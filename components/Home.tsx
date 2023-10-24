@@ -8,6 +8,7 @@ import SectionTitle from "./SectionTitle";
 import Link from "next/link";
 import SlideText from "./SlideText";
 import Image from "next/image";
+import { ArrowSmallDownIcon } from "@heroicons/react/20/solid";
 
 const textVariants: Variants = {
   hidden: (direction) => ({
@@ -115,15 +116,10 @@ const Home = ({ name, background }: { name: string; background: string }) => {
                 repeat: Infinity,
               },
             }}
-            className="relative h-8 w-8 md:h-10 md:w-10"
+            className="relative flex  flex-col items-center "
           >
-            <Image
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              src="/assets/scroll.png"
-              alt="scroll"
-              fill
-              priority
-            />
+            <span>More</span>
+            <ArrowSmallDownIcon className="h-6 w-6" />
           </motion.div>
         </div>
       </motion.div>

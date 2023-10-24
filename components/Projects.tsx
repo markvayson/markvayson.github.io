@@ -58,7 +58,7 @@ const Projects = ({ data }: { data: PinnedItem[] }) => {
     <section
       ref={ref}
       id="projects"
-      className="relative flex flex-col items-center space-y-5"
+      className="relative my-2 flex flex-col items-center space-y-5"
     >
       <SectionTitle title="Featured Projects" />
       {data.map((project, index) => (

@@ -29,10 +29,10 @@ export const navigations = [
     name: "home",
     link: "#home",
   },
-  {
-    name: "about",
-    link: "#about",
-  },
+  // {
+  //   name: "about",
+  //   link: "#about",
+  // },
   // {
   //   name: "experiences",
   //   link: "#experiences",

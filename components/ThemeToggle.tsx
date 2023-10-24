@@ -20,7 +20,7 @@ const ThemeToggle = ({ isOpen }: { isOpen: boolean }) => {
     <div
       className={`${
         isOpen ? "absolute right-24 top-4 z-50 flex" : "hidden md:flex"
-      }   absolute  right-32 top-4  items-center md:order-2 md:text-xl`}
+      }   absolute  right-32 top-4  items-center md:order-2 `}
     >
       <label className="relative flex h-8 items-center gap-1   ">
         <span className="cursor-pointer">Theme</span>
@@ -40,9 +40,9 @@ const ThemeToggle = ({ isOpen }: { isOpen: boolean }) => {
             className="flex cursor-pointer items-center md:absolute md:-right-16"
           >
             {theme === "light" ? (
-              <SunIcon className="h-8 w-8 " />
+              <SunIcon className="h-6 w-6 " />
             ) : (
-              <MoonIcon className="h-8 w-8" />
+              <MoonIcon className="h-6 w-6" />
             )}
           </motion.div>
         </AnimatePresence>
