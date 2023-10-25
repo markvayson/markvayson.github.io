@@ -106,7 +106,7 @@ const Projects = ({ data }: { data: PinnedItem[] }) => {
               <Image
                 src={project.openGraphImageUrl}
                 alt={project.name}
-                className="-z-10 shadow-md max-md:object-fill  md:rounded-[2rem]  md:p-5 lg:p-0"
+                className="-z-10 object-cover shadow-md  md:rounded-[2rem]  md:p-5 lg:p-0"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
