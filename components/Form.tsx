@@ -24,7 +24,7 @@ const Form = () => {
           <textarea
             minLength={10}
             maxLength={2000}
-            className="inputClass peer h-full w-full rounded-lg"
+            className="inputClass peer min-h-full w-full rounded-lg "
             name="message"
             required
           />

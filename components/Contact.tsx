@@ -46,7 +46,7 @@ const Contact = ({
       viewport={{ once: true }}
     >
       <SectionTitle title="Message Me" />
-      <div className="relative m-auto flex w-full max-w-10xl flex-auto flex-col divide-slate-700 max-sm:gap-2 max-sm:divide-y max-sm:px-5  md:grid md:max-h-96 md:grid-cols-2  md:flex-row">
+      <div className="relative m-auto flex h-full w-full max-w-10xl flex-auto flex-col divide-slate-700   ">
         {children}
 
         <div className="flex w-full flex-auto flex-col items-center pt-2 ">

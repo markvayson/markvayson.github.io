@@ -7,6 +7,7 @@ import getSocials from "@/lib/getSocials";
 import Contact from "@/components/Contact";
 import Form from "@/components/Form";
 import { QueryType } from "@/typings";
+import MyProjects from "@/components/MyProjects";
 
 const Main = async () => {
   const data: QueryType = await fetchGit(myQuery);
@@ -16,8 +17,7 @@ const Main = async () => {
       <Home background={data.avatarUrl} name={data.name} />
       {/* <AboutMe data={data.profileREADME} /> */}
       {/* <Experiences /> */}
-      <Projects data={data.pinnedItems.nodes} />
-
+      <MyProjects data={data.pinnedItems.nodes} />
       <Contact socials={socials}>
         <Form />
       </Contact>
