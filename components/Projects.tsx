@@ -70,34 +70,21 @@ const Projects = ({ data }: { data: PinnedItem[] }) => {
           className="group flex min-h-screen w-full shrink-0 snap-center items-center justify-center"
           key={index}
         >
-          <div className=" grid h-screen w-full max-w-10xl  gap-2 max-sm:mt-24 max-sm:grid-rows-2 md:mt-0   md:max-h-96 md:grid-cols-2 md:gap-10 ">
-            <motion.div
-              variants={imgVariants}
-              className="relative m-auto h-[24rem] w-[26rem]  md:w-full  group-even:md:order-2"
-            >
-              <Image
-                src={project.openGraphImageUrl}
-                alt={project.name}
-                className="rounded-[2rem] object-cover p-5 md:p-0"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </motion.div>
+          <div className="grid h-screen w-full max-w-10xl    max-md:grid-rows-2 md:max-h-96 lg:grid-cols-2     lg:px-5 ">
             <motion.div
               variants={childVariants}
-              className="flex flex-col items-center gap-5 p-5 md:items-start md:justify-center md:p-0 group-even:md:order-1 group-even:md:items-end "
+              className="flex flex-col items-center justify-center gap-2 px-5    pt-12 lg:items-start lg:justify-center  group-odd:lg:items-end group-even:lg:order-2 "
             >
-              <h1 className="text-5xl font-black capitalize md:text-7xl">
+              <h1 className="text-5xl font-black capitalize lg:text-7xl">
                 {project.name}
               </h1>
-              <p className="text-justify text-base md:text-lg">
+              <p className="text-justify text-base lg:text-lg">
                 {project.description}
               </p>
               <div className="flex  items-center gap-5">
                 <Link
                   target="_blank"
-                  className="rounded-full bg-red-600 px-3 py-2 text-white transition duration-300 hover:scale-125 md:text-lg group-even:md:order-2"
+                  className="rounded-full bg-red-600 px-3 py-2 text-white transition duration-300 hover:scale-125 md:text-lg group-odd:lg:order-2"
                   href={project.homepageUrl}
                 >
                   See Demo
@@ -111,6 +98,19 @@ const Projects = ({ data }: { data: PinnedItem[] }) => {
                   View Code
                 </Link>
               </div>
+            </motion.div>
+            <motion.div
+              variants={imgVariants}
+              className="relative m-auto h-[24rem] w-full max-w-2xl   group-even:lg:order-1"
+            >
+              <Image
+                src={project.openGraphImageUrl}
+                alt={project.name}
+                className="-z-10 shadow-md max-md:object-fill  md:rounded-[2rem]  md:p-5 lg:p-0"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </motion.div>
           </div>
         </motion.article>
