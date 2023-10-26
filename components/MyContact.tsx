@@ -1,7 +1,6 @@
 "use client";
 import { Variants, motion } from "framer-motion";
 import Form from "./Form";
-import SectionTitle from "./SectionTitle";
 import Social from "./Social";
 import { useInView } from "react-intersection-observer";
 import useActiveSectionContext from "@/lib/activeSection";
