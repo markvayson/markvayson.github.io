@@ -53,11 +53,11 @@ export const MenuToggle = () => {
       animate={isOpen ? "open" : "closed"}
     >
       <motion.div
-        className="fixed  z-50 bg-white/90 shadow-md dark:bg-slate-800/90 md:hidden "
+        className="fixed  z-50 bg-white/90 shadow-md dark:bg-slate-800/90 lg:hidden "
         variants={sidebar}
       />
       <button
-        className="fixed right-5 top-5 z-50 cursor-pointer text-slate-50 outline-none    md:hidden   "
+        className="fixed right-5 top-5 z-50 cursor-pointer text-slate-50 outline-none    lg:hidden   "
         onClick={() => toggleOpen()}
       >
         <svg width="24" height="24" fill="#8f4848" viewBox="0 0 23 23">

@@ -76,6 +76,7 @@ const Home = ({ name, background }: { name: string; background: string }) => {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-contain"
           fill
+          priority
         />
       </motion.div>
       <SectionTitle title="Welcome to my Portfolio" />

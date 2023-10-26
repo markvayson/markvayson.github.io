@@ -54,7 +54,7 @@ const Articles = ({ text }: { text: { [key: string]: string } }) => {
       variants={parentVariants}
       initial="initial"
       whileInView="animate"
-      className="relative flex max-sm:w-screen max-sm:snap-x   max-sm:snap-mandatory   md:grid md:min-h-screen  md:w-full md:grid-cols-2  md:gap-x-[24rem] md:pb-24"
+      className="relative flex bg-red-300 max-sm:w-screen max-sm:snap-x   max-sm:snap-mandatory   md:grid md:min-h-screen  md:w-full md:grid-cols-2  md:gap-x-[24rem] md:pb-24"
     >
       <motion.div
         initial={{ opacity: 0 }}

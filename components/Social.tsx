@@ -1,8 +1,25 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { Variants, motion } from "framer-motion";
+
+const socialChildVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
 const Social = ({ url, provider }: { url: string; provider: string }) => {
   return (
-    <div className="h-fit w-fit  transition md:hover:scale-125">
+    <motion.div variants={socialChildVariants} className="flex items-center">
       <Link target="_blank" className="flex items-center gap-2" href={url}>
         <Image
           alt={provider}
@@ -12,7 +29,7 @@ const Social = ({ url, provider }: { url: string; provider: string }) => {
         />
         {provider}
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

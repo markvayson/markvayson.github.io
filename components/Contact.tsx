@@ -1,10 +1,11 @@
 "use client";
-import { ReactNode, useEffect } from "react";
+import { useEffect } from "react";
 import { Variants, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import useActiveSectionContext from "@/lib/activeSection";
 import Social from "./Social";
 import SectionTitle from "./SectionTitle";
+import Form from "./Form";
 const sectionVariants: Variants = {
   hidden: {
     transition: {
@@ -18,13 +19,7 @@ const sectionVariants: Variants = {
   },
 };
 
-const Contact = ({
-  socials,
-  children,
-}: {
-  children: ReactNode;
-  socials: { [key: string]: string };
-}) => {
+const Contact = ({ socials }: { socials: { [key: string]: string } }) => {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
@@ -39,16 +34,25 @@ const Contact = ({
     <motion.section
       ref={ref}
       id="contact"
-      className="relative flex min-h-screen w-full snap-start flex-col items-center overflow-hidden "
+      className="relative grid min-h-screen grid-cols-1  overflow-hidden "
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
     >
       <SectionTitle title="Message Me" />
-      <div className="relative m-auto flex h-full w-full max-w-10xl flex-auto flex-col divide-slate-700   ">
-        {children}
-
+      <Form />
+      <div className="flex grow flex-col items-center ">
+        <h1 className="text-center text-3xl font-black capitalize">
+          Stay Connected.
+        </h1>
+        <div className="grid w-full grid-cols-2  gap-2 p-5  ">
+          {Object.keys(socials).map((key) => (
+            <Social provider={key} url={socials[key]} key={key} />
+          ))}
+        </div>
+      </div>
+      {/* <div className="relative m-auto grid h-full w-full max-w-10xl flex-auto grid-cols-1 divide-slate-700 ">
         <div className="flex w-full flex-auto flex-col items-center pt-2 ">
           <h1 className="text-center text-3xl font-black  md:text-7xl md:tracking-widest">
             Stay Connected.
@@ -59,7 +63,7 @@ const Contact = ({
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </motion.section>
   );
 };

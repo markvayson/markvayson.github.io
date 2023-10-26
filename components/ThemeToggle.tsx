@@ -29,22 +29,16 @@ const ThemeToggle = ({ isOpen }: { isOpen: boolean }) => {
     return null;
   }
 
-  console.log(isOpen);
   return (
     <motion.button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       variants={themeVariants}
       animate="open"
       className={`${
-        isOpen ? "left-5" : "right-5 hidden md:flex"
+        isOpen ? "left-5" : "right-5 hidden lg:flex"
       } absolute  top-5 z-50 text-lg capitalize`}
     >
-      <span className="md:hidden">{theme} Mode</span>
-      {theme === "dark" ? (
-        <MoonIcon className="h-8 w-8 max-sm:hidden" />
-      ) : (
-        <SunIcon className="h-8 w-8 max-sm:hidden" />
-      )}
+      <span className="lg:hidden">{theme} Mode</span>
     </motion.button>
   );
 };
