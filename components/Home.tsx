@@ -4,7 +4,6 @@ import useActiveSectionContext from "@/lib/activeSection";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { Variants, motion } from "framer-motion";
-import SectionTitle from "./SectionTitle";
 import Link from "next/link";
 import SlideText from "./SlideText";
 import Image from "next/image";
@@ -79,7 +78,6 @@ const Home = ({ name, background }: { name: string; background: string }) => {
           priority
         />
       </motion.div>
-      <SectionTitle title="Welcome to my Portfolio" />
       <motion.div
         variants={containerVariants}
         initial="hidden"

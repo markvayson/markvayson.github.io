@@ -2,6 +2,7 @@
 import { SVGMotionProps, Variants, motion, useCycle } from "framer-motion";
 import Links from "./Links";
 import ThemeToggle from "./ThemeToggle";
+import SectionTitle from "./SectionTitle";
 
 type PathProps = SVGMotionProps<SVGPathElement>;
 
@@ -52,6 +53,7 @@ export const MenuToggle = () => {
       initial="closed"
       animate={isOpen ? "open" : "closed"}
     >
+      <SectionTitle />
       <motion.div
         className="fixed  z-50 bg-white/90 shadow-md dark:bg-slate-800/90 lg:hidden "
         variants={sidebar}

@@ -8,6 +8,7 @@ import Form from "@/components/Form";
 import { QueryType } from "@/typings";
 import MyProjects from "@/components/MyProjects";
 import MyContact from "@/components/MyContact";
+import SectionTitle from "@/components/SectionTitle";
 
 const Main = async () => {
   const data: QueryType = await fetchGit(myQuery);

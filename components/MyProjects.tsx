@@ -4,7 +4,6 @@ import useActiveSectionContext from "@/lib/activeSection";
 import { PinnedItem } from "@/typings";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import SectionTitle from "./SectionTitle";
 import Project from "./Project";
 
 const MyProjects = ({ data }: { data: PinnedItem[] }) => {
@@ -22,9 +21,8 @@ const MyProjects = ({ data }: { data: PinnedItem[] }) => {
     <section
       ref={ref}
       id="projects"
-      className="relative  flex flex-col items-center justify-center gap-2"
+      className="relative flex flex-col items-center justify-center gap-2 "
     >
-      <SectionTitle title="Featured Projects" />
       {data.map((project) => (
         <Project project={project} key={project.homepageUrl} />
       ))}

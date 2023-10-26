@@ -1,21 +1,24 @@
 "use client";
 import { motion } from "framer-motion";
+import useActiveSectionContext from "@/lib/activeSection";
 
-const SectionTitle = ({
-  title,
-  className,
-}: {
-  title: string;
-  className?: string;
-}) => {
+const titles: { [key: string]: string } = {
+  home: "Welcome to my Portfolio",
+  projects: "Featured Projects",
+  contact: "Message Me",
+};
+
+const SectionTitle = () => {
+  const { activeSection } = useActiveSectionContext();
   return (
     <motion.h1
-      initial={{ opacity: 0, width: "0%" }}
-      whileInView={{ opacity: 1, width: "auto" }}
+      key={activeSection}
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className={`sticky left-0 top-0 z-20 h-fit w-fit overflow-hidden whitespace-nowrap pt-5   text-center  text-lg font-black md:pt-24  md:text-2xl lg:hidden ${className}`}
+      className="fixed left-0 right-0 top-5 whitespace-nowrap text-center text-xl font-bold  lg:hidden"
     >
-      {title}
+      {titles[activeSection]}
     </motion.h1>
   );
 };

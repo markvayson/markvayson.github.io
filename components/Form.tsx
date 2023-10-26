@@ -12,7 +12,7 @@ const fieldVariants: Variants = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.3,
+      duration: 0.5,
     },
   },
 };
@@ -38,7 +38,7 @@ const Form = () => {
       whileInView="visible"
       viewport={{ once: true }}
       action={sendEmail}
-      className="m-auto flex h-full w-full max-w-xl flex-col items-center gap-8 lg:justify-center"
+      className="mx-auto flex w-full max-w-xl flex-col items-center gap-8 pt-16 lg:justify-center  lg:pt-0"
     >
       <motion.fieldset variants={fieldVariants} className="relative w-full">
         <input

@@ -46,9 +46,9 @@ const Project = ({ project }: { project: PinnedItem }) => {
       variants={parentVariants}
       initial="hidden"
       whileInView="visible"
-      className="group grid min-h-screen w-full max-w-10xl snap-center grid-cols-1 items-center justify-center  p-5 lg:grid-cols-2  "
+      className="group flex min-h-screen  w-full max-w-10xl snap-center flex-col  items-center gap-10  pt-16 lg:flex-row    lg:gap-0 "
     >
-      <div className="flex flex-col items-center justify-center gap-2 overflow-hidden [--y-to:0%] max-md:[--y-from:100%] lg:px-10 lg:[--x-to:0%] lg:[--y-from:0%] lg:group-odd:items-end lg:group-odd:[--x-from:100%] lg:group-even:order-2 lg:group-even:items-start lg:group-even:[--x-from:-100%]">
+      <div className="flex flex-col items-center justify-center gap-2 overflow-hidden   [--y-to:0%] max-md:[--y-from:100%] lg:px-10 lg:[--x-to:0%] lg:[--y-from:0%] lg:group-odd:items-end lg:group-odd:[--x-from:100%] lg:group-even:order-2 lg:group-even:items-start lg:group-even:[--x-from:-100%]">
         <motion.h1
           variants={textVariants}
           className="text-5xl font-black capitalize"
@@ -80,7 +80,7 @@ const Project = ({ project }: { project: PinnedItem }) => {
       </div>
       <motion.div
         variants={imgVariants}
-        className="relative m-auto h-full w-full max-w-3xl flex-auto lg:max-h-96 lg:group-even:order-1  "
+        className="relative h-80  w-full max-w-3xl  lg:m-auto lg:max-h-96 lg:group-even:order-1  "
       >
         <Image
           src={project.openGraphImageUrl}
@@ -88,6 +88,7 @@ const Project = ({ project }: { project: PinnedItem }) => {
           fill
           className="rounded-md object-cover"
           priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </motion.div>
     </motion.article>
