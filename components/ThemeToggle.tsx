@@ -7,13 +7,13 @@ import { MoonIcon, SunIcon } from "@heroicons/react/20/solid";
 
 const themeVariants: Variants = {
   open: {
-    opacity: 1,
+    opacity: "var(--opacity-to)",
     transition: {
       duration: 0.5,
     },
   },
   closed: {
-    opacity: 0,
+    opacity: "var(--opacity-from)",
   },
 };
 
@@ -29,16 +29,21 @@ const ThemeToggle = ({ isOpen }: { isOpen: boolean }) => {
     return null;
   }
 
+  console.log(isOpen);
   return (
     <motion.button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       variants={themeVariants}
-      animate="open"
       className={`${
         isOpen ? "left-5" : "right-5 hidden lg:flex"
       } absolute  top-5 z-50 text-lg capitalize`}
     >
       <span className="lg:hidden">{theme} Mode</span>
+      {theme === "dark" ? (
+        <MoonIcon className="h-8 w-8 max-lg:hidden" />
+      ) : (
+        <SunIcon className="h-8 w-8 max-lg:hidden" />
+      )}
     </motion.button>
   );
 };

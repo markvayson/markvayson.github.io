@@ -50,7 +50,7 @@ const Links = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => {
       variants={parent}
       initial={false}
       animate={isOpen ? "open" : "closed"}
-      className="fixed bottom-0  left-1/2 top-0 z-50 flex w-fit -translate-x-1/2 transform  flex-col justify-center gap-2  [--display-from:none] [--display-to:flex] [--opacity-from:0%] [--opacity-to:0%]  [--y-from:50] lg:bottom-auto lg:right-1/2 lg:top-2   lg:translate-y-0 lg:flex-row lg:items-center lg:justify-center lg:gap-5 lg:rounded-full lg:bg-white/90 lg:p-4 lg:shadow-lg lg:[--display-from:flex] lg:[--opacity-from:100%] lg:[--y-from:0] dark:lg:bg-slate-800/50"
+      className="fixed bottom-0  left-1/2 top-0 z-50 flex w-fit -translate-x-1/2 transform  flex-col justify-center gap-2  [--display-from:none] [--display-to:flex] [--opacity-from:0%] [--opacity-to:100%]  [--y-from:50] lg:bottom-auto lg:right-1/2 lg:top-2   lg:translate-y-0 lg:flex-row lg:items-center lg:justify-center lg:gap-5 lg:rounded-full lg:bg-white/90 lg:p-4 lg:shadow-lg lg:[--display-from:flex] lg:[--opacity-from:100%] lg:[--y-from:0] dark:lg:bg-slate-800/50"
     >
       {navigations.map((nav, index) => (
         <motion.li
