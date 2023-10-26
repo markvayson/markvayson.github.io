@@ -90,7 +90,7 @@ const Home = ({ name, background }: { name: string; background: string }) => {
         >
           My name is
         </motion.h1>
-        <p className=" space-x-5 text-center  text-5xl  font-black  lg:text-7xl">
+        <p className=" space-x-2 text-center  text-5xl  font-black  lg:text-7xl">
           {name.split(" ").map((word, index) => (
             <motion.span
               className="inline-block"
