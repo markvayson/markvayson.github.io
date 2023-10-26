@@ -3,8 +3,6 @@ import { PinnedItem } from "@/typings";
 import { Variants, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-
 const parentVariants: Variants = {
   hidden: {},
   visible: {},
@@ -71,7 +69,7 @@ const Project = ({ project }: { project: PinnedItem }) => {
           </Link>
           <Link
             target="_blank"
-            className="bg-red-600 px-2  py-1 lg:group-odd:order-1"
+            className="bg-red-600 px-2 py-1  text-white lg:group-odd:order-1"
             href={project.homepageUrl}
           >
             See Demo

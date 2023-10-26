@@ -29,7 +29,6 @@ const ThemeToggle = ({ isOpen }: { isOpen: boolean }) => {
     return null;
   }
 
-  console.log(isOpen);
   return (
     <motion.button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

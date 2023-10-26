@@ -23,6 +23,7 @@ export const ActiveSectionContext =
 const Provider = ({ children }: { children: ReactNode }) => {
   const [activeSection, setActiveSection] = useState<SectionName>("home");
   const [timeOfLastClick, setTimeOfLastClick] = useState(0);
+
   return (
     <ThemeProvider attribute="class">
       <ActiveSectionContext.Provider
