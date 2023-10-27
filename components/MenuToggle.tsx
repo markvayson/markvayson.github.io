@@ -57,7 +57,9 @@ export const MenuToggle = () => {
   };
   return (
     <motion.nav
-      className={isOpen ? "fixed inset-0 z-30 " : " relative z-50"}
+      className={`${
+        isOpen ? "fixed inset-0 z-30 " : " relative z-50"
+      } max-w-10xl `}
       initial="closed"
       animate={isOpen ? "open" : "closed"}
     >

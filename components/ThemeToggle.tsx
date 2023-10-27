@@ -31,17 +31,19 @@ const ThemeToggle = ({ isOpen }: { isOpen: boolean }) => {
 
   return (
     <motion.button
+      type="button"
+      aria-label="Theme"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       variants={themeVariants}
       className={`${
         isOpen ? "left-5" : "right-5 hidden lg:flex"
-      } absolute top-5 z-50 flex  items-center gap-2 bg-transparent text-lg capitalize outline-none [--opacity-from:0%] [--opacity-to:100%]`}
+      } absolute top-5 z-50 flex  items-center gap-2 bg-transparent text-lg capitalize outline-none [--opacity-from:0%] [--opacity-to:100%] lg:[--opacity-from:100%]`}
     >
       <span className="lg:hidden">Change Theme</span>
       {resolvedTheme === "dark" ? (
-        <MoonIcon key={"dark"} className="h-8 w-8 " />
+        <MoonIcon className="h-8 w-8 " />
       ) : (
-        <SunIcon key={"light"} className="h-8 w-8 " />
+        <SunIcon className="h-8 w-8 " />
       )}
     </motion.button>
   );
