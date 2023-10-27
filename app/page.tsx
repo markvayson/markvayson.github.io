@@ -11,8 +11,8 @@ const Main = async () => {
   const socials = await getSocials();
   return (
     <main className="relative flex h-screen w-full select-none snap-y snap-mandatory flex-col gap-1 overflow-x-hidden overflow-y-scroll !scroll-smooth px-5   ">
-      {/* <Home background={data.avatarUrl} name={data.name} />
-      <MyProjects data={data.pinnedItems.nodes} /> */}
+      <Home background={data.avatarUrl} name={data.name} />
+      <MyProjects data={data.pinnedItems.nodes} />
       <MyContact socials={socials} />
     </main>
   );
