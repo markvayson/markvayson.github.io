@@ -19,8 +19,7 @@ const themeVariants: Variants = {
 
 const ThemeToggle = ({ isOpen }: { isOpen: boolean }) => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-
+  const { resolvedTheme, setTheme } = useTheme();
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -31,14 +30,14 @@ const ThemeToggle = ({ isOpen }: { isOpen: boolean }) => {
 
   return (
     <motion.button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       variants={themeVariants}
       className={`${
         isOpen ? "left-5" : "right-5 hidden lg:flex"
       } absolute  top-5 z-50 text-lg capitalize`}
     >
-      <span className="lg:hidden">{theme} Mode</span>
-      {theme === "dark" ? (
+      <span className="lg:hidden">{resolvedTheme} Mode</span>
+      {resolvedTheme === "dark" ? (
         <MoonIcon className="h-8 w-8 max-lg:hidden" />
       ) : (
         <SunIcon className="h-8 w-8 max-lg:hidden" />
