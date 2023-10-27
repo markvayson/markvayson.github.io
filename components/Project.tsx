@@ -59,7 +59,10 @@ const Project = ({ project }: { project: PinnedItem }) => {
         >
           {project.description}
         </motion.p>
-        <motion.div variants={textVariants} className="flex gap-2 pt-5">
+        <motion.div
+          variants={textVariants}
+          className="flex items-center gap-2 pt-5"
+        >
           <Link
             target="_blank"
             className="px-2 py-1 lg:group-odd:order-2"
@@ -69,7 +72,7 @@ const Project = ({ project }: { project: PinnedItem }) => {
           </Link>
           <Link
             target="_blank"
-            className="bg-primary px-2 py-1  text-white lg:group-odd:order-1"
+            className="bg-primary dark:bg-primary-dark px-2 py-1 text-xl text-white lg:group-odd:order-1"
             href={project.homepageUrl}
           >
             See Demo
@@ -84,7 +87,7 @@ const Project = ({ project }: { project: PinnedItem }) => {
           src={project.openGraphImageUrl}
           alt={project.name}
           fill
-          className="rounded-md object-cover"
+          className="rounded-md object-cover shadow-lg"
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />

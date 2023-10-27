@@ -105,7 +105,7 @@ const Home = ({ name, background }: { name: string; background: string }) => {
         <div className="absolute bottom-12 flex flex-col items-center justify-center gap-5 ">
           <Link
             href="#contact"
-            className=" rounded-full border px-3 py-1 text-xl transition hover:scale-125 hover:border-red-600 hover:text-red-600"
+            className=" rounded-full px-3 py-1 text-xl transition hover:scale-125 hover:border hover:border-red-600 hover:text-red-600"
           >
             Let's Talk
           </Link>

@@ -60,9 +60,10 @@ const Links = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }) => {
         >
           <Link
             className={`${
-              activeSection === nav.name &&
-              "bg-primary text-white opacity-100  backdrop-blur"
-            } transition-color group flex items-center gap-2 rounded-full px-3 py-1 duration-300 hover:bg-red-800 hover:text-white  `}
+              activeSection === nav.name
+                ? " text-primary dark:text-primary-dark opacity-100  backdrop-blur"
+                : "hover:bg-primary dark:hover:bg-primary-dark hover:text-white "
+            } group  flex items-center gap-2 rounded-full px-3 py-1 transition duration-300  `}
             href={nav.link}
             onClick={() => handleClick(nav.name)}
           >
