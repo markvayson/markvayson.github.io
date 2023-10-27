@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
 @layer components {
   .inputClass {
     @apply absolute  z-10 w-full  border bg-transparent px-5 py-4 outline-none autofill:bg-transparent   invalid:text-opacity-0;

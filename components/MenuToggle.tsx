@@ -3,6 +3,8 @@ import { SVGMotionProps, Variants, motion, useCycle } from "framer-motion";
 import Links from "./Links";
 import ThemeToggle from "./ThemeToggle";
 import SectionTitle from "./SectionTitle";
+import { useState } from "react";
+import Credits from "./Credits";
 
 type PathProps = SVGMotionProps<SVGPathElement>;
 
@@ -44,23 +46,32 @@ const sidebar: Variants = {
 
 export const MenuToggle = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const [animationCompleted, setAnimationCompleted] = useState<boolean>(true);
 
+  const handleClick = () => {
+    if (animationCompleted) {
+      toggleOpen();
+      setAnimationCompleted(false);
+    }
+    return;
+  };
   return (
     <motion.nav
-      className={
-        isOpen ? "fixed inset-0 z-30  backdrop-blur" : " relative z-50"
-      }
+      className={isOpen ? "fixed inset-0 z-30 " : " relative z-50"}
       initial="closed"
       animate={isOpen ? "open" : "closed"}
     >
       <SectionTitle />
       <motion.div
-        className="fixed  z-50 bg-white/90 shadow-md dark:bg-slate-800/90 lg:hidden "
+        className="fixed  z-50  bg-white/90 shadow-md backdrop-blur dark:bg-slate-800/90 lg:hidden "
         variants={sidebar}
+        onAnimationComplete={() => setAnimationCompleted(true)}
       />
       <button
-        className="fixed right-5 top-5 z-50 cursor-pointer text-slate-50 outline-none    lg:hidden   "
-        onClick={() => toggleOpen()}
+        className={`${
+          !animationCompleted && "pointer-events-none"
+        } fixed right-5 top-5 z-50 cursor-pointer text-slate-50 outline-none    lg:hidden   `}
+        onClick={handleClick}
       >
         <svg width="24" height="24" fill="#8f4848" viewBox="0 0 23 23">
           <Path
@@ -87,6 +98,7 @@ export const MenuToggle = () => {
       </button>
       <ThemeToggle isOpen={isOpen} />
       <Links isOpen={isOpen} toggle={() => toggleOpen()} />
+      {isOpen && <Credits />}
     </motion.nav>
   );
 };

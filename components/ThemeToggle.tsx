@@ -10,6 +10,7 @@ const themeVariants: Variants = {
     opacity: "var(--opacity-to)",
     transition: {
       duration: 0.5,
+      delay: 0.3,
     },
   },
   closed: {
@@ -34,13 +35,13 @@ const ThemeToggle = ({ isOpen }: { isOpen: boolean }) => {
       variants={themeVariants}
       className={`${
         isOpen ? "left-5" : "right-5 hidden lg:flex"
-      } absolute  top-5 z-50 text-lg capitalize`}
+      } absolute top-5 z-50 flex  items-center gap-2 bg-transparent text-lg capitalize outline-none [--opacity-from:0%] [--opacity-to:100%]`}
     >
-      <span className="lg:hidden">{resolvedTheme} Mode</span>
+      <span className="lg:hidden">Change Theme</span>
       {resolvedTheme === "dark" ? (
-        <MoonIcon className="h-8 w-8 max-lg:hidden" />
+        <MoonIcon key={"dark"} className="h-8 w-8 " />
       ) : (
-        <SunIcon className="h-8 w-8 max-lg:hidden" />
+        <SunIcon key={"light"} className="h-8 w-8 " />
       )}
     </motion.button>
   );
