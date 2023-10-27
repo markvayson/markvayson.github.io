@@ -9,6 +9,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#B30000",
+        dark: "#020617",
+        light: "#f8fafc",
+      },
       minHeight: {
         device: "100dvh",
       },

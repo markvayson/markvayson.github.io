@@ -69,7 +69,7 @@ const Project = ({ project }: { project: PinnedItem }) => {
           </Link>
           <Link
             target="_blank"
-            className="bg-red-600 px-2 py-1  text-white lg:group-odd:order-1"
+            className="bg-primary px-2 py-1  text-white lg:group-odd:order-1"
             href={project.homepageUrl}
           >
             See Demo

@@ -41,9 +41,9 @@ const ThemeToggle = ({ isOpen }: { isOpen: boolean }) => {
     >
       <span className="lg:hidden">Change Theme</span>
       {resolvedTheme === "dark" ? (
-        <MoonIcon className="h-8 w-8 " />
+        <MoonIcon className="dark:text-light text-dark h-8 w-8 " />
       ) : (
-        <SunIcon className="h-8 w-8 " />
+        <SunIcon className="dark:text-light text-dark h-8 w-8" />
       )}
     </motion.button>
   );
