@@ -4,11 +4,11 @@ import SubmitBtn from "./SubmitBtn";
 import { sendEmail } from "@/lib/sendEmail";
 
 const fieldVariants: Variants = {
-  hidden: {
+  closed: {
     opacity: 0,
     scale: 0.5,
   },
-  visible: {
+  open: {
     opacity: 1,
     scale: 1,
     transition: {
@@ -18,12 +18,12 @@ const fieldVariants: Variants = {
 };
 
 const formVariants: Variants = {
-  hidden: {
+  closed: {
     transition: {
       staggerChildren: 0.125,
     },
   },
-  visible: {
+  open: {
     transition: {
       staggerChildren: 0.125,
     },
@@ -34,8 +34,8 @@ const Form = () => {
   return (
     <motion.form
       variants={formVariants}
-      initial="hidden"
-      whileInView="visible"
+      initial="closed"
+      whileInView="open"
       viewport={{ once: true }}
       action={sendEmail}
       className="mx-auto flex w-full max-w-xl flex-col items-center gap-8 pt-16 lg:justify-center  lg:pt-0"

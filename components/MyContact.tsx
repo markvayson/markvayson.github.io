@@ -5,14 +5,15 @@ import Social from "./Social";
 import { useInView } from "react-intersection-observer";
 import useActiveSectionContext from "@/lib/activeSection";
 import { useEffect } from "react";
+import Credits from "./Credits";
 
 const socialVariants: Variants = {
-  hidden: {
+  closed: {
     transition: {
       staggerChildren: 0.125,
     },
   },
-  visible: {
+  open: {
     transition: {
       staggerChildren: 0.125,
     },
@@ -49,8 +50,8 @@ const MyContact = ({ socials }: { socials: { [key: string]: string } }) => {
         </motion.h1>
         <motion.div
           variants={socialVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial="closed"
+          whileInView="open"
           viewport={{ once: true }}
           className="m-auto grid h-fit w-fit grid-cols-2  gap-5 gap-x-10 lg:grid-cols-3 "
         >
@@ -59,6 +60,7 @@ const MyContact = ({ socials }: { socials: { [key: string]: string } }) => {
           ))}
         </motion.div>
       </div>
+      <Credits className="absolute bottom-2 left-0 right-0 z-50 hidden justify-evenly text-center  lg:flex" />
     </section>
   );
 };

@@ -25,19 +25,16 @@ const textVariants: Variants = {
   },
 };
 
-const Credits = () => {
+const Credits = ({ className }: { className: string }) => {
   return (
-    <motion.div
-      variants={parent}
-      className="absolute bottom-2 left-0 right-0 z-50 flex justify-evenly  text-center"
-    >
+    <motion.footer variants={parent} className={className}>
       <motion.p custom={1} variants={textVariants}>
         &copy; 2023 Mark Christian Vayson.
       </motion.p>
       <motion.p custom={-1} variants={textVariants}>
         All Rights Reserved.
       </motion.p>
-    </motion.div>
+    </motion.footer>
   );
 };
 

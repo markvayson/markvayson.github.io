@@ -98,7 +98,9 @@ export const MenuToggle = () => {
       </button>
       <ThemeToggle isOpen={isOpen} />
       <Links isOpen={isOpen} toggle={() => toggleOpen()} />
-      {isOpen && <Credits />}
+      {isOpen && (
+        <Credits className="absolute bottom-2 left-0 right-0 z-50 flex justify-evenly  text-center" />
+      )}
     </motion.nav>
   );
 };

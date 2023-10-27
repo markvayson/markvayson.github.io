@@ -4,11 +4,11 @@ import Link from "next/link";
 import { Variants, motion } from "framer-motion";
 
 const socialChildVariants: Variants = {
-  hidden: {
+  closed: {
     opacity: 0,
     y: 100,
   },
-  visible: {
+  open: {
     opacity: 1,
     y: 0,
     transition: {
